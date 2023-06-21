@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+    <title>GMTROM - True Random Number Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png href="logomiddle.png">
+  </head>
+  <body>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>GMTROM - True Random Number Generator</h1>
+    <form id="randomForm">
+      <input type="button" value="Initialize" id="initButton"><br><br>  
+      <label for="quantity">Quantity of Random Numbers:</label>
+      <input type="number" id="quantity" name="quantity" min="1"><br><br>
+      <label for="bits">Number of Bits per Random Number:</label>
+      <input type="number" id="bits" name="bits" min="1"><br><br>       
+      <input type="button" value="Generate" id="generateButton">      
+      <input type="button" value="Shutdown" id="shutdownButton"> 
+      
+      <div id="status"></div>
+      <div id="description"></div>
+    </form>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay hidden"></div>
+
+    <div id="loadingSpinner" class="loading-spinner hidden">
+      <div class="spinner"></div>
+    </div>
+    <div id="loadingText" class="loading-text"></div>
+    
+    
+    <div id="result"></div>    
+    
+    <script src="script.js"></script>
+    
+  </body>
+</html>

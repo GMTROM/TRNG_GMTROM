@@ -1,0 +1,267 @@
+body {
+font-family: Arial, sans-serif;
+background-color: #292C35;
+color: #DCAE52;
+}
+
+table {
+font-family: monospace, Arial, sans-serif;
+max-width: 100%;
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 100px;
+background-color: #292C35;
+color: #DCAE52;
+font-size: 14px;
+border: 1px solid #DCAE52; 
+}
+
+th, td {
+border: 1px solid #DCAE52; 
+}
+
+td {
+text-align: center;
+padding: 5px;
+}
+
+h1 {
+color: #DCAE52;
+text-align: center;
+}
+
+.disabled-input {
+  
+}
+
+form {
+background-color: #292C35;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+padding: 20px;
+width: 50%;
+margin: 0 auto;
+}
+
+label {
+display: block;
+font-weight: bold;
+margin-bottom: 10px;
+color: #DCAE52;
+}
+
+input[type="number"] {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border: 1px solid #E9E2C9;
+border-radius: 5px;
+box-sizing: border-box;
+background-color: #E9E2C9;
+}
+
+.disabled-input[type="number"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  border-color: #cccccc;
+  background-color: #999999;
+}
+
+input[type="number"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  border-color: #cccccc;
+  background-color: #999999;
+}
+
+input[type="submit"] {
+background-color: #292C35;
+border: 1px solid #E9E2C9;
+/* border: none; */
+color: #DCAE52;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+input[type="submit"]:hover {
+background-color: #E9E2C9;
+}
+
+input[type="button"] {
+background-color: #292C35;
+border: 1px solid #E9E2C9;
+/* border: none; */
+color: #DCAE52;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+input[type="button"]:hover {
+background-color: #E9E2C9;
+}
+
+.logo {
+position: absolute;
+top: 10px;
+left: 10px;
+width: 4em;
+height: 4em;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    width: 80%;
+    position: relative;  
+    }
+    
+    .logo {
+    width: 2em; /* Ändern Sie die Breite des Logos für kleine Bildschirme */
+    height: 2em; /* Ändern Sie die Höhe des Logos für kleine Bildschirme */
+  }
+
+  h1 {
+    font-size: 24px; /* Ändern Sie die Schriftgröße der Überschrift für kleine Bildschirme */
+  }
+}
+
+#status {
+  margin-top: 15px;
+}
+
+#result {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.copy-button {
+background-color: #292C35;
+border: 1px solid #E9E2C9;
+color: #DCAE52;
+padding: 5px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.copy-button:hover {
+background-color: #E9E2C9;
+}
+
+.copy-button-row {
+background-color: #292C35;
+border: 1px solid #E9E2C9;
+color: #DCAE52;
+padding: 5px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+border-radius: 3px;
+cursor: pointer;
+}
+
+.copy-button-row:hover {
+background-color: #E9E2C9;
+}
+
+.table th:first-child,
+.table td:first-child,
+.table th:nth-child(2),
+.table td:nth-child(2) {
+width: auto;
+white-space: nowrap;
+}
+
+.table th:nth-child(3),
+.table td:nth-child(3) {
+width: 100%;
+}
+
+.table thead tr {
+font-weight: bold;
+font-size: 1.2em;
+background-color: #DCE52;
+min-height: 20px;
+}
+
+/* Loading Spinner */
+#loadingSpinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #DCAE52;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+#loadingText {
+  color: #DCAE52;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px; /* Anpassung des margin-top-Werts auf 20px */
+  position: fixed;
+  top: calc(50% + 45px); /* Anpassung des top-Werts auf calc(50% + 45px) */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+}
+
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  text-align: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+input[type="submit"]:disabled,
+input[type="button"]:disabled {
+  background-color: #999999;
+  border-color: #cccccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+  color: #666666
+}
+
