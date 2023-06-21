@@ -1,0 +1,15 @@
+[Unit]
+Description=Nginx HTTP server
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/nginx -g "daemon off;"
+ExecReload=/usr/sbin/nginx -s reload
+ExecStop=/usr/sbin/nginx -s stop
+Restart=on-failure
+KillMode=process
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+

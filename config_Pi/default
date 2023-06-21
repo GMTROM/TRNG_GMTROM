@@ -1,0 +1,25 @@
+server {
+	#listen 80;
+	#server_name 172.16.78.57;
+	#server_name _;
+
+	listen 443 ssl;
+        server_name 172.16.78.57;
+
+	ssl_certificate /etc/nginx/ssl/cert-gmtrom.pem;
+	ssl_certificate_key /etc/nginx/ssl/cert-gmtrom-key.pem;
+
+	root /var/www/html;
+	index index.html;
+
+	location /trng {
+		proxy_pass https://172.16.78.57:5000;  # Weiterleitung an den Flask-Server
+		proxy_set_header Host $host;
+		proxy_set_header X-Real-IP $remote_addr;
+	}
+
+	location = /logomiddle.png {
+		alias /var/www/html/logomiddle.png;
+	}
+
+}
